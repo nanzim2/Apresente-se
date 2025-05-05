@@ -4,15 +4,15 @@ botao.addEventListener("click", function(){
    var nome = String(prompt("Qual é o seu Nome?"));
 
    //validação nome
-   if (nome.trim() === "" || !isNaN(Number(nome))) {
+   if (nome.trim() === "") {
       alert("Por favor, digite um nome válido");
       return; //sai da função
    }
 
-   var idade = prompt("Qual a sua idade?");
+   let idade = Number(prompt("Qual a sua idade?"));
 
    //validação idade
-   if (idade.trim() !== "" && !isNaN(idade)) { 
+   if (!isNaN(idade) && idade.trim() !== "") { 
       idade = parseInt(idade); //Converte para número
       
       window.alert(`Prazer em te conhecer ${nome}!`)
